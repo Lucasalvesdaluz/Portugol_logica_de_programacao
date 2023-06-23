@@ -1,5 +1,5 @@
 programa
-{
+{	inclua biblioteca Tipos --> t
 	
 	funcao inicio()
 	{
@@ -17,16 +17,42 @@ programa
 	
 	escreva("\nDigite sua opção: ")
 	leia(op)
-	escreva("Você escolheu a operação de ")
+	escreva("Você escolheu a operação [") 
 
-	escolha(op){
+		escolha(op){
 		caso '+': 
 		escreva("+")
 		pare 
 		caso '-':
 		escreva("-")
-		pare
-		}  
+		pare 
+		caso '*':
+		escreva("*")
+		pare 
+		caso '/':
+		escreva("/")
+		pare 
+		caso contrario: 
+		escreva(op)
+		} 
+	escreva("]\n")
+
+	escreva("Digite o primeiro número: ")
+	leia(n1)
+	escreva("Digite o segundo número: ")
+	leia(n2)
+	escreva("----------------------------\n")
+	escreva("Calculando o valor de ",n1,op,n2)
+
+	se(op=='+')
+		escreva("\nResultado da soma = ",n1+n2)
+	senao se(op=='-')
+		escreva("Resultado da subtração = ",n1-n2)
+	se(op=='*')
+		escreva("\nResultado da multiplicação = ",n1*n2)
+	senao se(op=='/')
+		escreva("Resultado da divisão = ",t.inteiro_para_real(n1)/n2)
+	
 	} 
 }
 	
@@ -35,7 +61,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 412; 
+ * @POSICAO-CURSOR = 1192; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
