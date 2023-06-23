@@ -44,14 +44,23 @@ programa
 	escreva("----------------------------\n")
 	escreva("Calculando o valor de ",n1,op,n2)
 
-	se(op=='+')
+	escolha(op){
+		caso '+': 
 		escreva("\nResultado da soma = ",n1+n2)
-	senao se(op=='-')
+		pare 
+		caso '-':
 		escreva("Resultado da subtração = ",n1-n2)
-	se(op=='*')
+		pare 
+		caso '*':
 		escreva("\nResultado da multiplicação = ",n1*n2)
-	senao se(op=='/')
+		pare 
+		caso '/':
 		escreva("Resultado da divisão = ",t.inteiro_para_real(n1)/n2)
+		pare 
+		caso contrario: 
+		escreva("\nEssa operação ainda não está disponível. ")
+		escreva("Escolha uma das opções acima.")
+		} 
 	
 	} 
 }
@@ -61,7 +70,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1192; 
+ * @POSICAO-CURSOR = 1254; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
